@@ -17,12 +17,7 @@ const colors = [
   const stopBtn = document.querySelector('button[data-action="stop"]');
   console.log(stopBtn);
 
-  const body = document.querySelector('body');
-  console.log(body)
-
-  startBtn.addEventListener('click', changeColors)
-
-  console.log(colors[randomIntegerFromInterval(0, colors.length-1)])
+  startBtn.addEventListener('click', changeColors);
 
   let isActive = false
 
@@ -33,7 +28,6 @@ const colors = [
       isActive = true;
       timer = setInterval(() =>{
           document.body.style.background = `${colors[randomIntegerFromInterval(0, colors.length)]}`;
-          console.log(body.style.background)
 
       },1000)
 
